@@ -4,17 +4,19 @@
 
 A convenient converter of [dconf](https://gitlab.gnome.org/GNOME/dconf) files to Nix, as expected by [Home Manager's dconf settings](https://rycee.gitlab.io/home-manager/options.xhtml#opt-dconf.settings). So you can Nixify your [GNOME Shell](https://gitlab.gnome.org/GNOME/gnome-shell) configuration :wink:
 
-<!--ts-->
-* [Benchmarks](#benchmarks)
-* [Introduction](#introduction)
-* [Run](#run)
-  * [Custom root](#custom-root)
-* [Supported types](#supported-types)
-* [GNOME Shell configuration](#gnome-shell-configuration)
-* [Installation](#installation)
-* [Troubleshooting](#troubleshooting)
-* [Development](#development)
-<!--te-->
+<!--TOC-->
+
+- [Benchmarks](#benchmarks)
+- [Introduction](#introduction)
+- [Run](#run)
+  - [Custom root](#custom-root)
+- [Supported types](#supported-types)
+- [GNOME Shell configuration](#gnome-shell-configuration)
+- [Installation](#installation)
+- [Troubleshooting](#troubleshooting)
+- [Development](#development)
+
+<!--TOC-->
 
 ---
 
@@ -173,7 +175,7 @@ If you are using the Home Manager module for NixOS you can import it like so:
 
 `dconf2nix` is available in [Nixpkgs](https://github.com/NixOS/nixpkgs) and can be installed as any other package. It can also be used without installing. For example, with flakes.
 
-```console 
+```console
 $ nix run nixpkgs#dconf2nix -- --version
 <<< DCONF2NIX >>>
 Version: 0.0.12

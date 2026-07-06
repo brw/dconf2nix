@@ -1,9 +1,10 @@
 {
-  packages ? import nix/pkgs.nix { inherit compiler; },
-  compiler ? import nix/ghc-version.nix,
+  pkgs ? import <nixpkgs> { },
+  compiler ? "ghc912",
 }:
-
 let
-  inherit (packages) hp;
+  hp = pkgs.haskell.packages.${compiler}.override {
+    overrides = newPkgs: oldPkgs: { };
+  };
 in
 hp.callCabal2nix "dconf2nix" ./. { }
